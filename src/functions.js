@@ -1,4 +1,4 @@
-function addToCart(quantity,productName="Elma") {
+function addToCart(quantity,productName="Elma") {  //productName gönderilmezse default olarak Elma gönderir. Default değerler sona yazılır.
     console.log("Sepete eklendi : ürün : " 
     + productName + " adet : " + quantity)
 }
@@ -7,11 +7,11 @@ function addToCart(quantity,productName="Elma") {
 addToCart(10)
 //addToCart(15)
 
-let sayHello = ()=>{
+let sayHello = ()=>{              // arrow function - fonksiyonu değişkene atama
     console.log("Hello World!")
 }
 
-sayHello()
+sayHello()      //değişkene fonksiyon atandığında da normal fonksiyonu çağırdığımız gibi çağırabiliriz.
 
 let sayHello2 = function () {
     console.log("Hello World 2")
