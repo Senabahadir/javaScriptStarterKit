@@ -1,5 +1,7 @@
 console.log("Merhaba Kodlama.io")
 
+// undefined = tanımlanmamıştır, değer atanmamıştır veya  tanımlandığı yer yanlışsa undefined çıktısını alırız
+
 //JS type safe değildir
 let dolarBugun = 9.30
 
