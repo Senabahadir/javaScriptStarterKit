@@ -62,7 +62,7 @@ let products = [
 
 addToCart4(products)
 
-function add(bisey,...numbers) { //rest
+function add(bisey,...numbers) { //rest (...)  // ...numbers-> istediğin kadar sayı gönderebilirsin. array olarak tutulur. rest'i her zaman sona yaz. ilk atanan biseye atanır geriye kalanlar numbersa'a atılır.
     let total = 0;
     for (let i = 0; i < numbers.length; i++) {
         total = total + numbers[i]
