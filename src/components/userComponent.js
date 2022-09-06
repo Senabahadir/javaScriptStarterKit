@@ -1,7 +1,8 @@
 import { BaseLogger, ElasticLogger, MongoLogger } from "../crossCuttingConcerns/logging/logger.js"
 import Customer from "../models/customer.js"
 import User from "../models/user.js"
-import UserService from "../services/userService.js"
+import UserService from "../services/userService.js" // export default dediğimiz için bu şekilde çağırabildik. userService içerisine default eklememiş olsaydık;
+// import {UserService} from "../services/userService.js" //şeklinde {} içerisinde kullanırdık.
 
 console.log("User component yüklendi")
 
@@ -23,8 +24,8 @@ let customer = {id:1, firstName:"Engin"}
 
 //prototyping
 customer.lastName = "Demiroğ"
-
 console.log(customer.lastName)
+
 
 console.log("--------------------------")
 userService.load()

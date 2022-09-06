@@ -1,7 +1,13 @@
+//Classları iki temel yapıya ayırabiliriz. 1- Değer tutan classlar 2- Operasyon tutucu classlar
+//Mesela bizim fonksiyonlarımız var ve bu fonksiyonları gruplamak isteyebiliriz.
+//Js'de bu şart değil ama Biz bunları nesneler içerisinde tutup, bunlara bağımlılıklar eklemek istendiği durumda kullanılabilir.
+//Her şeyi ayrı  ayrı fonksiyonda yapabiliriz ancak bir yerden sonra olayın yönetimi zorlaşır.
+//Örneğin trendyolda farklı ekranlarda sepete ekleyi çağırıyoruz (sepeti güncelliyoruz, çıkarıyoruz vs). Yani sepetle ilgili işlemler yapıyoruz. O yüzden biz bu fonksiyonları bir classın içerisine yerleştiriyoruz. Yani gruplamış oluyoruz.
 import { users } from "../data/users.js"
 import DataError from "../models/dataError.js"
 
-export default class UserService {
+//fonksiyonlarımızı classın içerisine gruplama amaçlı ekliyoruz.
+export default class UserService { // export -> dışarıdan import edilebileceği anlamıına geliyor. default-> js, dosya bazlı olduğu için userService dosyasını import ettiğimde default olarak bu classı import et demek.
     constructor(loggerService) {
         this.employees = []
         this.customers = []

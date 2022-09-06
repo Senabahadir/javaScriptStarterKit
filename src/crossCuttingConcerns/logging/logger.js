@@ -15,4 +15,3 @@ export class MongoLogger extends BaseLogger{
         console.log("Logged to Mongo" + data)
     }
 }
-
