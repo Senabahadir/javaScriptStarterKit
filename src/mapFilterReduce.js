@@ -7,39 +7,41 @@ let cart = [
     {id:6, productName:"Pot", quantity:5, unitPrice:150},
 ]
 
+// map
 console.log("<ul>")
-cart.map(product=>{
+cart.map(product=>{       //map --> arrayin içindeki elemanları tek tek dolaşmamızı sağlar. // product -> her bir değerin takma adı
     console.log("<li>"+product.productName + " : " 
     + product.unitPrice * product.quantity+"</li>")
 })
 console.log("</ul>")
 
-let total = cart.reduce((acc,product)=>acc+ product.unitPrice * product.quantity,0)
 
-//23.00 Dersteyiz
+// reduce
+let total0 = cart.reduce((acc,product)=>acc+ product.unitPrice, 0)//acc -> accumulator // toplam hesaplamak için // 0-> toplamaya kaçtan başayayım. acc'ın ilk değeridir.
+//product'ın unitPrice'ını accumulator'e ekliyor. (0 + 4000 + 30 + ... + 150)
+let total = cart.reduce((acc,product)=>acc+ product.unitPrice * product.quantity,0)  // product'ın unitPrice ve quantity çarpımlarını yapıp toplam değeri veriyor.
 console.log(total)
 
 
+// filter
 let quantityOver2 = cart.filter(product=>product.quantity>2)
-
 console.log(quantityOver2)
 
+
+
+// add reference type
 function addToCart(sepet) {
     sepet.push({id:7, productName:"Ruhsat", quantity:1, unitPrice:20})
 }
 
+addToCart(cart)         // Referans tip olduğu için burada aslında cartın adresini gönderiyoruz.
+console.log(cart)      // Adresine atama yapılabildi ve ürün eklendi.
 
 
-addToCart(cart)
-
-console.log(cart)
-
+//add value type
 let sayi = 10
-
 function sayiTopla(number) {
     number += 1
 }
 sayiTopla(sayi)
-console.log(sayi)
-
-//23.00 Dersteyiz
+console.log(sayi)       // Değer tip olduğu için değer değişmedi. 10 atanmıştı ve 10 yazdırdı.
